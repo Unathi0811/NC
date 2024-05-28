@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body,
+        html {
+            /* you can add overflow:hidden here to make the scrollbar disappear */
+
+            margin: 0;
+            height: 100%;
+            width: 100%;
+            background-image: url(https://images6.alphacoders.com/377/377152.jpg);
+        }
+
+        #button-back {
+            padding: 15px;
+            color: white;
+            text-shadow: 2px 2px 3px rgba(0, 0, 0, .5);
+            font-size: 20pt;
+        }
+
+        .profile-body {
+            margin: 25px;
+        }
+
+        .profile {
+            margin-top: -45px;
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 25px;
+            background-color: #ddd;
+            padding: 20px;
+            z-index: 0;
+        }
+
+        .socialmedia {
+            text-align: center;
+        }
+
+        .photo {
+            margin: 25px;
+
+        }
+
+        .image--cover {
+            width: 170px;
+            height: 170px;
+            border: #fff 3px solid;
+            border-radius: 50%;
+            object-fit: cover;
+            object-position: center;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: auto;
+            margin-top: -40px;
+        }
+
+        .username,
+        .profession,
+        .locationname,
+        .descricao {
+            text-align: center;
+            font-family: 'Roboto', sans-serif;
+            padding: 0;
+            margin: 1px;
+        }
+
+        .username {
+
+            font-size: 20pt;
+            margin: 2px
+        }
+
+        .profession {
+            font-size: 14pt;
+        }
+
+        .locationname {
+            font-size: 14pt;
+            margin: 2px
+        }
+
+        .descricao {
+            border-top: #969696 solid 1px;
+            padding: 10px;
+            font-size: 11pt;
+            margin: 5px;
+        }
+
+        .button-facebook,
+        .button-instagram,
+        .button-twitter,
+        .button-whatsapp {
+            padding: 5px;
+            font-size: 30pt;
+        }
+
+        .button-facebook {
+            color: #3C5A99;
+        }
+
+        .button-instagram {
+            color: #893dc2;
+        }
+
+        .button-twitter {
+            color: #1DA1F2;
+        }
+
+        .button-whatsapp {
+            color: #4AC959;
+        }
+
+        #rating-stars {
+            margin: 4px;
+        }
+
+        #rating-stars .stars {
+            display: inline-flex;
+        }
+
+        #rarate-input {
+            pointer-events: none;
+        }
+
+        #rating-stars .rate-input {
+            position: absolute;
+            left: -9999px;
+        }
+
+        #rating-stars label {
+            cursor: pointer;
+            padding: 1px;
+            font-size: 20pt;
+        }
+
+        #rating-stars .star-icon {
+            color: orange;
+        }
+
+        #rating-stars .rate-input:checked~.star-label .star-icon {
+            color: #999;
+        }
+
+        #rating-stars .stars:hover .star-label .star-icon {
+            color: orange;
+        }
+
+        #rating-stars .rate-input:hover~.star-label .star-icon {
+            color: #999;
+        }
+    </style>
+    <!--this is where the booking pag etakes the nanny to review the nanny details bluh bluh-->
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+        integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+</head>
+<body>
+    <a href="./bookings.html"><i class="fas fa-arrow-left" id="button-back"></i></a>
+    <div class="profile-body">
+        <div class="photo">
+            <img src="/images/unathi.jpeg"
+                class="image--cover">
+        </div>
+        <div class="profile">
+
+            <div id="rating-stars" item-align="center">
+                <div class="stars">
+                    <label aria-label="first-star" class="star-label" for="rate-1"><i
+                            class="rate-icon star-icon fa fa-star"></i></label>
+                    <input class="rate-input" name="rating" id="rate-1" value="1" type="radio">
+                    <label aria-label="second-star" class="star-label" for="rate-2"><i
+                            class="rate-icon star-icon fa fa-star"></i></label>
+                    <input class="rate-input" name="rating" id="rate-2" value="2" type="radio">
+                    <label aria-label="third-star" class="star-label" for="rate-3"><i
+                            class="rate-icon star-icon fa fa-star"></i></label>
+                    <input class="rate-input" name="rating" id="rate-3" value="3" type="radio">
+                    <label aria-label="fourth-star" class="star-label" for="rate-4"><i
+                            class="rate-icon star-icon fa fa-star"></i></label>
+                    <input class="rate-input" name="rating" id="rate-4" value="4" type="radio">
+                    <label aria-label="fifth-star" class="star-label" for="rate-5"><i
+                            class="rate-icon star-icon fa fa-star"></i></label>
+                    <input class="rate-input" name="rating" id="rate-5" value="5" type="radio">
+                </div>
+            </div>
+
+            <h1 class="username">Unathi Suru</h1>
+            <h2 class="profession"> Nanny </h2>
+            <h3 class="locationname"><i class="fas fa-map-marker-alt"></i> GP, South Africa </h3>
+            <p class="descricao">Hi, I'm a caring and experienced nanny with a passion for working with children. I believe in creating a safe, nurturing environment where kids can learn and grow. I'm excited to meet you and your family!</p>
+
+            <div class="socialmedia">
+                <a href="#" class="button-facebook"><i class="fab fa-facebook-square"></i></a>
+                <a href="#" class="button-instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="button-twitter"><i class="fab fa-twitter-square"></i></a>
+                <a href="#" class="button-whatsapp"><i class="fab fa-whatsapp-square"></i></a>
+            </div>
+        </div>
+
+</html>

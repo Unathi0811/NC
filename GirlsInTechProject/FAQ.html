@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frequently Asked Questions | NANNY CO.</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/stylesheet.css">
+    <link rel="shortcut icon" href="/Preview.jpg" type="image/x-icon">
+    <style>
+        @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,600italic,400italic,300italic,700italic);
+        .header {
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 300;
+            color: #fff;
+            background-color: plum;
+
+            .user-img {
+                margin: 10px 15px 10px 5px;
+                height: 35px;
+                width: 35px;
+            }
+
+            .logo {
+                width: 150px;
+            }
+
+            .nav-home {
+                margin: 10px;
+                margin-top: 25px;
+                list-style-type: none;
+
+                li {
+                    padding-right: 25px;
+                    display: inline;
+                    font-weight: bold;
+                    text-transform: uppercase;
+
+                    a {
+                        color: #fff;
+
+                        &:hover {
+                            text-decoration: none;
+                            color: #ccc;
+                        }
+                    }
+                }
+            }
+
+            .home {
+                margin-left: 3px;
+                font-size: 1.4em;
+                font-weight: 600;
+            }
+        }
+
+        .no-padding {
+            padding-right: 0;
+            padding-left: 0;
+        }
+
+        .about-row {
+            padding: 50px 0;
+            font-family: 'Open Sans', sans-serif;
+            background-color: plum;
+
+            .inner-about-row {
+                text-align: center;
+                color: #fff;
+
+                h1 {
+                    font-family: 'Open Sans', sans-serif;
+                    font-size: 55px;
+                }
+            }
+
+            .input-group {
+                .form-control {
+                    padding: 20px 10px 20px 50px;
+                    height: auto;
+                    font-size: 1.1em;
+                    line-height: 1.3em;
+                    border: none;
+                }
+
+                btn {
+                    padding: 20px 10px 20px 50px;
+                    height: 60px;
+                }
+            }
+        }
+
+
+        h4 {
+            -moz-transition: all 0.35s ease;
+            -ms-transition: all 0.35s ease;
+            -o-transition: all 0.35s ease;
+            -webkit-transition: all 0.35s ease;
+            background-color: #F4F4F1;
+            border-bottom: 3px solid plum;
+            margin: 0;
+            margin: 0;
+            padding: 18px 15px;
+            transition: all 0.35s ease;
+            font-weight: 500;
+
+            &:hover {
+                background-color: plum;
+                color: black;
+                cursor: pointer;
+            }
+
+            &::before {
+                content: "\276f";
+                font-size: 18px !important;
+                float: left;
+                line-height: 30px;
+                margin: 0 15px 0 5px;
+                opacity: 0.5;
+                -moz-transition: all 0.15s ease;
+                -ms-transition: all 0.15s ease;
+                -o-transition: all 0.15s ease;
+                -webkit-transition: all 0.15s ease;
+                transition: all 0.15s ease;
+            }
+        }
+
+        h4.faqsup {
+            cursor: pointer;
+
+            &::after {
+                content: "\2715";
+                float: right;
+                font-size: 11px;
+                font-weight: 300;
+                line-height: 30px;
+            }
+
+            &::before {
+                -moz-transform: rotate(-90deg) !important;
+                -ms-transform: rotate(-90deg) !important;
+                -o-transform: rotate(-90deg) !important;
+                -webkit-transform: rotate(-90deg) !important;
+                transform: rotate(-90deg) !important;
+            }
+        }
+
+        #faqs-accordion {
+            margin: 40px auto 0;
+            padding: 0 5%;
+        }
+
+
+        div.answers {
+            background: rgb(197, 117, 197);
+            margin-bottom: 20px;
+            line-height: 1.8em;
+
+            p {
+                font-weight: 400;
+                margin: 0;
+                padding: 25px 50px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid no-padding header">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="pull-right">
+                        <ul class="nav-home">
+                            <li><a href="/landingPage.html">NANNY CO</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="container-fluid no-padding">
+
+        <div class="about-row">
+            <div class="row">
+                <div class="col-md-12 inner-about-row">
+                    <h1>FAQs</h1>
+                    <h3>How do we help? Please let us know your problem</h3>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="faqs">
+            <div id="faqs-accordion">
+                <div class="row">
+                    <div class="col-md-6">
+                        <ul class="vertical default_list">
+                            <li>
+                                <h4>Is it possible to get a nanny late at night?</h4>
+                                <div class="answers">
+                                    <p>Absolutely, as nanny co is a 24 hour business</p>
+                                </div>
+                    </div>
+                    <div class="col-md-6">
+                        <h4>How do I book a nanny?</h4>
+                        <div class="answers">
+                            <p>To book a nanny, simply visit our website and create an account.
+                                Once logged in, you can browse available nannies, view their profiles, and schedule appointments based on your requirements.</p>
+                        </div>
+
+                        <h4>What qualifications do your nannies have?</h4>
+                        <div class="answers">
+                            <p>All our nannies undergo thorough background checks and have relevant certifications, in childcare, such as CPR and first aid training.     We also ensure that they have prior experience working with children</p>
+                        </div>
+
+                        <h4> Can I request a specific nanny?</h4>
+                        <div class="answers">
+                            <p>Yes, you can request a specific nanny based on their availability. <br>
+                                Simply contact us and let us know your preferences, <br>
+                                and we'll do our best to accommodate your request.</p>
+                        </div>
+                        <h4>What are your rates?</h4>
+                        <div class="answers">
+                            <p>Our rates vary depending on the type of service you require and the<br> 
+                                duration of the booking.</p>
+                        </div>
+                        <h4>. How do I pay for nanny services?<</h4>
+                        <div class="answers">
+                            <p>We accept various payment methods, including credit/debit cards and electronic bank transfers. Payment details will be provided upon booking confirmation</p>
+                        </div>
+                    </div>
+                </div>
+                </li>
+                </ul>
+            </div>
+
+
+            <a href="#" id="faqs-all">Close all</a>
+        </div>
+
+    </div>
+
+</html>
+<script src="script.js"></script>
+<script>
+    var clics = 0;
+
+    $(document).ready(function () {
+
+        $('.answers').hide();
+        $('#faqs-all').hide();
+
+        $('h4').click(function () {
+
+            $(this).next('.answers').toggle(function () {
+
+                $(this).next('.answers');
+
+            }, function () {
+
+                $(this).next('.answers').fadeIn('fast');
+
+            });
+
+            if ($(this).hasClass('faqsup')) {
+                $(this).removeClass('faqsup');
+            } else {
+                $(this).addClass('faqsup');
+            };
+
+            if ($('.faqsup').length >= 3) {
+
+                $('#faqs-all').fadeIn('fast');
+
+            } else {
+                $('#faqs-all').hide();
+                var abiertas = $('.faqsup').length
+                console.log(abiertas);
+            }
+        }); //Close Function Click	            
+
+    }); //Close Function Ready
+
+    $('#faqs-all').click(function () {
+        $('.answers').fadeOut(200);
+        $('h4').removeClass('faqsup');
+        $('#faqs-all').fadeOut('fast');
+
+
+        $('#search-1').hideseek();
+    });
+</script>
+</body>
+
+</html>

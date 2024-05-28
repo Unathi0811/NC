@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NANNY CO | SEARCH NANNY</title>
+    <link rel="shortcut icon" href="/logo.png" type="image/x-icon">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .container.body-content {
+            padding: 8px 0;
+            width: 90%;
+            margin: 0 auto;
+        }
+
+        label,
+        input,
+        button {
+            display: block;
+        }
+
+        input[type="text"] {
+            padding: 10px;
+            width: 100%;
+        }
+
+        button {
+            margin: 10px 0 !important;
+            padding: 10px 20px;
+        }
+
+        #error-msg {
+            color: #C50707;
+        }
+
+        /*Map Styling*/
+        #map-canvas {
+            border: groove 3px #ccc;
+            height: 350px;
+        }
+
+        .open-me {
+            display: none;
+        }
+
+        body{
+            background-color: purple;
+        }
+
+
+    </style>
+</head>
+
+<body>
+
+
+    <div class="container body-content">
+        
+        <form action="#" onsubmit="showAddress(this.address.value); return false">
+            <div class="row">
+                <div class="col-md-6">
+                    <label for="address">Nannies Address</label>
+                    <input id="address" type="text" value="City Hall, New York, NY" />
+                    <button type="button" id="submit"> <a href="/profile/profileCard.html">Locate nanny!</a></button>
+                    <p id="error-msg"></p>
+                </div>
+                <div class="col-md-6">
+                    <label for="address">Parents Address</label>
+                    <input id="address" type="text" value="City Hall, New York, NY" />
+                    <button type="button" id="submit"> >Locate parent!</a></button>
+                    <p id="error-msg"></p>
+                </div>
+                <div class="col-md-6">
+                    <div id="map-canvas">[map]</div>
+                </div>
+            </div>
+        </form>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!--the idea here is to make the nannies show after a certain button has been clicked,  <section id="nanniesAround">
+        <div class="cards-layout masonry">
+            <article class="card">
+                <header class="card-header">
+                    <img src="/n1.jpeg" alt="" onclick="clickNanny() " />
+                </header>
+                <article class="card-content">
+                    <h3 class="card-content-title">luyanda Khoza</h3>
+                </article>
+                <footer class="card-footer">
+                    <p>More interesting things about the thing</p>
+                </footer>
+            </article>
+
+            <article class="card">
+                <header class="card-header">
+                    <img src="/n2.jpeg" alt="" onclick="clickNanny() " />
+                </header>
+                <article class="card-content">
+                    <h3 class="card-content-title">Sisiphiwe Zuma</h3>
+                </article>
+                <footer class="card-footer">
+                    <p>More interesting things about the thing</p>
+                </footer>
+            </article>
+
+            <article class="card">
+                <header class="card-header">
+                    <img src="/n3.jpeg" alt="" onclick="clickNanny() " />
+                </header> <br>
+                <article class="card-content">
+                    <h3 class="card-content-title">Bridget Gojo</h3>
+                </article>
+                <footer class="card-footer">
+                    <p>More interesting things about the thing</p>
+                </footer>
+            </article>
+
+            <article class="card">
+                <header class="card-header">
+                    <img src="/n4.jpeg" alt="" onclick="clickNanny() " />
+                </header>
+                <article class="card-content">
+                    <h3 class="card-content-title">Lessly Sukuna</h3>
+                </article>
+                <footer class="card-footer">
+                    <p>More interesting things about the thing</p>
+                </footer>
+            </article>
+
+            <article class="card">
+                <header class="card-header">
+                    <img src="/n6.jpeg" alt="" onclick="clickNanny() " />
+                </header>
+                <article class="card-content">
+                    <h3 class="card-content-title">Betty Kaisen</h3>
+                </article>
+                <footer class="card-footer">
+                    <p>More interesting things about the thing</p>
+                </footer>
+            </article>
+
+            <article class="card">
+                <header class="card-header">
+                    <img src="/n7.jpeg" alt="" onclick="clickNanny() " />
+                </header> <br>
+                <article class="card-content">
+                    <h3 class="card-content-title">Lana Rey</h3>
+                </article>
+                <footer class="card-footer">
+                    <p>More interesting things about the thing</p>
+                </footer>
+            </article>
+        </div>
+    </section>-->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+    <script src="//maps.googleapis.com/maps/api/js?key=AIzaSyCEx9EKv8MkEaFw9KS0JiE9QvED9cGhkJo&amp;callback=initMap"
+        async="" defer=""></script>
+
+    <script src="/script.js"></script>
+</body>
+
+</html>

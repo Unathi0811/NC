@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Register | Parents| Nanny Co.</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/stylesheet.css">
+    <link rel="shortcut icon" href="/logo.png" type="image/x-icon">
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: url(/images/pexels-lum3n-44775-168803.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            color: #4f1271;
+            backdrop-filter: blur(6px);
+        }
+
+        .container .form {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 25px;
+            width: 100%;
+        }
+
+        .container .form.signin,
+        .container.signinForm .form.signup {
+            display: none;
+        }
+
+        .container.signinForm .form.signin {
+            display: flex;
+        }
+
+        .container .form h2 {
+            color: #4f1271;
+            font-weight: 500;
+            letter-spacing: 0.1em;
+        }
+
+        .container .form .inputBox {
+            position: relative;
+            width: 300px;
+        }
+
+        .container .form .inputBox input {
+            padding: 12px 10px 12px 48px;
+            border: none;
+            width: 100%;
+            background: #fff;
+            border: 1px solid rgba(209, 106, 37, 0.1);
+            color: #4f1271;
+            font-weight: 300;
+            border-radius: 25px;
+            font-size: 1em;
+            box-shadow: -5px -5px 15px rgba(255, 255, 255, 0.1),
+                5px 5px 15px rgba(0, 0, 0, 0.35);
+            transition: 0.5s;
+            outline: none;
+        }
+
+        .container .form .inputBox span {
+            position: absolute;
+            left: 0;
+            padding: 12px 10px 12px 48px;
+            pointer-events: none;
+            font-size: 1em;
+            font-weight: 300;
+            transition: 0.5s;
+            letter-spacing: 0.05em;
+            color: #4f1271;
+        }
+
+        .container .form .inputBox input:valid~span,
+        .container .form .inputBox input:focus~span {
+            color: #4f1271;
+            border: 1px solid 4f1271;
+            background: linear-gradient(to bottom, #f0f0f0, #888888);
+            transform: translateX(25px) translateY(-7px);
+            font-size: 0.6em;
+            padding: 0 8px;
+            border-radius: 10px;
+            letter-spacing: 0.1em;
+        }
+
+        .container .form .inputBox input:valid,
+        .container .form .inputBox input:focus {
+            border: 1px solid 4f1271;
+        }
+
+        .container .form .inputBox i {
+            position: absolute;
+            top: 15px;
+            left: 16px;
+            width: 25px;
+            padding: 2px 0;
+            padding-right: 8px;
+            color: #4f1271;
+            border-right: 1px solid #4f1271;
+        }
+
+        .container .form .inputBox input[type="submit"] {
+            background: #4f1271;
+            color: black;
+            padding: 10px 0;
+            font-weight: 500;
+            cursor: pointer;
+            box-shadow: -5px -5px 15px rgba(255, 255, 255, 0.1),
+                5px 5px 15px rgba(0, 0, 0, 0.35),
+                inset -5px -5px 15px rgba(255, 255, 255, 0.1),
+                inset 5px 5px 15px rgba(0, 0, 0, 0.35);
+        }
+
+        .container .form p {
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 0.75em;
+            font-weight: 300;
+        }
+
+        .container .form p a {
+            font-weight: 500;
+            color: #4f1271;
+        }
+
+        /*profile picture*/
+        .profilePicture {
+            opacity: 0.75;
+            height: 100px;
+            width: 100px;
+            position: relative;
+            overflow: hidden;
+            background: url('https://qph.cf2.quoracdn.net/main-qimg-f32f85d21d59a5540948c3bfbce52e68');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            box-shadow: 0 8px 6px -6px black;
+        }
+
+        .file-uploader {
+            opacity: 0;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            cursor: pointer;
+            top: 0%;
+            left: 0%;
+        }
+
+        .upload-icon {
+            position: absolute;
+            top: 45%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            color: #ccc;
+            -webkit-text-stroke-width: 2px;
+            -webkit-text-stroke-color: #bbb;
+        }
+
+        .profilePicture:hover .upload-icon {
+            opacity: 1;
+        }
+
+        .row::after {
+            display: table;
+            content: "";
+            clear: both;
+        }
+
+        .container .form .inputBox:hover input 
+        {
+            border-color: #4f1271; /* Change border color */
+            box-shadow: 0 0 5px rgba(79, 18, 113, 0.5); /* Add a subtle box shadow */
+        }
+
+        .container .form .inputBox:hover span {
+            color: #4f1271; /* Change text color */
+        }
+
+        .inputBox {
+            
+            float: left;
+            width: 50%;
+        }
+
+        .agreeTermsAndConditions label li {
+            text-decoration: none;
+            list-style: none;
+            display: inline;
+        }
+
+        input[type="checkbox"] {
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            width: 20px;
+            height: 20px;
+            background-color: transparent;
+            border-radius: 3px solid black;
+            outline: none;
+            cursor: pointer;
+            box-shadow: -5px -5px 15px rgba(255, 255, 255, 0.1),
+                5px 5px 15px rgba(0, 0, 0, 0.35),
+                inset -5px -5px 15px rgba(255, 255, 255, 0.1),
+                inset 5px 5px 15px rgba(0, 0, 0, 0.35);
+        }
+
+        input[type="checkbox"]:checked {
+            background-color: #4f1271;
+        }
+
+        input[type="checkbox"]::before {
+            content: '\2713';
+            display: inline-block;
+            font-size: 20px;
+            color: black;
+            line-height: 20px;
+            text-align: center;
+            visibility: hidden;
+        }
+
+        input[type="checkbox"]:checked::before {
+            visibility: visible;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div id="registrationForm" class="form signup">
+            <h2>CREATE ACCOUNT (PARENTS) </h2>
+
+            <form action="parentinfo.php" method="post" enctype="multipart/form-data">
+                <div class="row">
+                    <div class="inputBox" id="username">
+                        <input type="text" name="first_name" required="required">
+                        <i class="fa-regular fa-user"></i>
+                        <span>first name</span>
+                    </div>
+    
+                    <div class="inputBox" id="username">
+                        <input type="text" name="last_name" required="required">
+                        <i class="fa-regular fa-user"></i>
+                        <span>last name</span>
+                    </div>
+                </div>
+                <br>
+
+                <div class="row">
+                    <div class="inputBox" id="username">
+                        <input type="text" name="phone" required="required">
+                        <i class="fa-solid fa-phone"></i>
+                        <span>Phone</span>
+                    </div>
+    
+                    <div class="inputBox" id="email">
+                        <input type="text" name="email" required="required">
+                        <i class="fa-regular fa-envelope"></i>
+                        <span>email address</span>
+                    </div>
+                </div>
+    <br>
+
+                <div class="profilePicture">
+                    <!--<label for="pp" style="color: #4f1271; text-align: center;">Profile Picture</label> <br> -->
+                    <h1 class="upload-icon">
+                        <i class="fa fa-plus fa-2x"></i>
+                    </h1>
+                    <input type="file" name="profile_picture" class="file-uploader" accept="image/*" required="required" onchange="upload()">
+                </div>
+    
+                <br>
+                <div class="row">
+                    <div class="inputBox"> 
+                        <input type="password" name="password" id="password" required="required">
+                        <i class="fa-solid fa-lock"></i>
+                        <span>create password</span>
+                    </div>
+                    <div class="inputBox">
+                        <input type="password" name="confirm_password" id="confirm_password" required="required">
+                        <i class="fa-solid fa-lock"></i>
+                        <span>confirm password</span>
+                    </div>
+                </div>
+    
+                <br>
+
+                <div class="agreeTermsAndConditions">
+                    <label>
+                        <input type="checkbox" style="color: #4f1271;">
+                        I accept the <a href="/termsOfService.html">Terms And Conditions </a>and <a
+                            href="/privacyPolicy.html">Privacy Policy</a>
+                    </label>
+                </div>
+    <br>
+                <div class="inputBox">
+                    <input type=submit value="GET STARTED">
+                </div>
+
+                <br> <br>
+
+                <p style="color: black; font-size: 1rem">Already a member ? <a href="/passwordRecovery/login.php" class="login" style="color: #4f1271;">Log in</a></p>
+            
+            </div>
+            </form>
+        </div>
+    </div>
+    </div>
+</body>
+
+</html>

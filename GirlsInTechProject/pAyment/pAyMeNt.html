@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Form</title>
+    <link rel="stylesheet" href="pAyMeNt.css">
+</head>  
+<body>
+    <div class="container">
+        <form action="payment.php" method="post">
+            <div class="row">
+                <div class="col">
+                    <h3 class="title">PAYMENT SYSTEM</h3>
+                    
+                    <div class="inputbox">
+                        <label for="fname">Card Holder:</label>
+                        <input type="text" name="fname" id="fname" placeholder="Enter your full name" required>
+                    </div>
+                    <div class="inputbox">
+                        <label for="email">Email:</label>
+                        <input type="email" name="email" id="email" placeholder="Email" required>
+                    </div>
+                    <div class="inputbox">
+                        <label for="address">Address:</label>
+                        <input type="text" name="address" id="address" placeholder="Room - Complex - Street" required>
+                    </div>
+                    <div class="inputbox">
+                        <label for="town">Town :</label>
+                        <input type="text" name="town" id="town" placeholder="e.g. Naturena" required>
+                    </div>
+                    <div class="inputbox flex">
+                        <div class="inputbox">
+                            <label for="province">Province:</label>
+                            <input type="text" name="province" id="province" placeholder="e.g. Gauteng" required>
+                        </div>
+                        <div class="postal">
+                            <label for="postal">Postal Code:</label>
+                            <input type="text" name="postal" id="postal" placeholder="e.g. 6675" required>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <h3 class="title">CARDS</h3>
+                    
+                    <div class="payment-options">
+                        <div class="payment-option">
+                            <label for="visa">Visa</label>
+                            <input type="radio" name="payment_method" id="visa" value="Visa" required>
+                            <label for="visa"><img src="icons/visa.png" alt="Visa"></label>
+                        </div>
+                        <div class="payment-option">
+                            <label for="mastercard">Mastercard</label>
+                            <input type="radio" name="payment_method" id="mastercard" value="Mastercard" required>
+                            <label for="mastercard"><img src="icons/Mastercard-Symbol.jpg" alt="Mastercard"></label>
+                        </div>
+                    </div>
+                    
+                    <div class="inputbox">
+                        <label for="cardnumber">Card number:</label>
+                        <input type="text" name="cardnumber" id="number" placeholder="3455 4576 4765 4590" required>
+                    </div>
+                    <div class="inputbox">
+                        <label for="expirydate">Expiry month:</label>
+                        <input type="text" name="expirydate" id="expirydate" required>
+                    </div>
+                    <div class="inputbox">
+                        <label for="expiryyear">Expiry year:</label>
+                        <input type="text" name="expiryyear" id="expiryyear" placeholder="e.g. 2028" required>
+                    </div>
+                    <div class="inputbox">
+                        <label for="cvv">CVV:</label>
+                        <input type="text" name="cvv" id="cvv" placeholder="e.g. 588" required>
+                    </div>
+                </div>
+            </div>
+            
+            <input type="submit" value="Proceed to Pay" class="submit">
+        </form>
+    </div>
+    <div id="popup" class="popup">
+        <div class="pop-up">
+            <span class="close" onclick="closePopUp()"> &times;</span>
+            <p>Confirm Payment</p>
+            <button onclick="confirmPayment()">OKAY</button>
+            <button onclick="closePopUp()">CANCEL</button>
+        </div>
+    </div>
+    <script src="pAyMeNt.js"></script>
+</body>
+</html>
+

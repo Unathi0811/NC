@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Confirmation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: purple;
+            margin: 0;
+            padding: 0;
+        }
+
+        .popup {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            z-index: 1000;
+        }
+
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+        }
+    </style>
+</head>
+<body>
+    <div class="overlay"></div>
+    <div class="popup">
+        <h2>Payment Confirmation</h2>
+        <p>Your payment will be processed within 72 hours.</p>
+    </div>
+
+    <script>
+        // Wait for the page to load before displaying the popup
+        window.addEventListener('load', function() {
+            // Display the popup after a short delay (e.g., 1 second)
+            setTimeout(function() {
+                document.querySelector('.popup').style.display = 'block';
+            }, 1000); // Adjust the delay as needed
+        });
+    </script>
+</body>
+</html>

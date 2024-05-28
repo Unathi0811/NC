@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book a Nanny</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" href="/logo.png" type="image/x-icon">
+    <style>
+        html {
+            background: white;
+        }
+
+        form {
+            width: 30%; 
+            height: 100%;
+            margin: 0 auto;
+            padding: 20px; 
+            border: 1px solid #ccc; 
+            border-radius: 10px; 
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        input {
+            width: 266px;
+            padding: 12px;
+            border-radius: 30px;
+            border: 2px solid purple;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); 
+        }
+
+        label {
+            font-size: 20px;
+            color: black;
+            margin-bottom: 10px; 
+        }
+
+        input[type="submit"] {
+            background-color: purple;
+            color: white;
+            padding: 10px 20px; 
+            border: none; 
+            border-radius: 30px; 
+            cursor: pointer; 
+        }
+
+        input[type="submit"]:hover {
+            background-color: purple; 
+        }
+    </style>
+</head>
+<body>
+    <h1 style="color: purple; margin-left: 595px; font-size: 2rem;">Book a Nanny</h1>
+    <form action="book_nanny.php" method="POST">
+        <label for="parent_name">Your Name:</label><br>
+        <input type="text" id="parent_name" name="parent_name" required><br><br>
+
+        <label for="nanny_id">Select a Nanny:</label><br>
+        <select id="nanny_id" name="nanny_id" required>
+            <?php
+                // PHP code to fetch nannies from database
+                $conn = new mysqli('localhost', 'Unathi', 'myPassUnathi', 'register');
+                if ($conn->connect_error) {
+                    die("Connection failed: " . $conn->connect_error);
+                }
+                
+                $sql = "SELECT id, name FROM nannies WHERE available = true";
+                $result = $conn->query($sql);
+                
+                if ($result->num_rows > 0) {
+                    while($row = $result->fetch_assoc()) {
+                        echo "<option value='". $row["id"]. "'>" . $row["name"]. "</option>";
+                    }
+                }
+                $conn->close();
+            ?>
+        </select><br><br>
+
+        <label for="start_time">Start Time:</label><br>
+        <input type="datetime-local" id="start_time" name="start_time" required><br><br>
+
+        <label for="end_time">End Time:</label><br>
+        <input type="datetime-local" id="end_time" name="end_time" required><br><br>
+
+        <input type="submit" value="Book Nanny">
+    </form>
+</body>
+</html>

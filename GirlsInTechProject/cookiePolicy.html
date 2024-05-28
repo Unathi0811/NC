@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cookie Policy | NANNY CO.</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="/stylesheet.css">
+  <link rel="shortcut icon" href="/Preview.jpg" type="image/x-icon">
+  <style>
+         @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap");
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Open Sans", sans-serif;
+        }
+
+        body {
+            width: 100%;
+            background: linear-gradient(to bottom, #f0f0f0, #e2a157);
+            font-size: 5px;
+        }
+    
+        header {
+            position: relative;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 10;
+            padding: 2px;
+            height: 110px; 
+            justify-content: center;
+            justify-items: center;
+            align-items: center;
+            background: transparent;
+            backdrop-filter: blur(10px);
+            background-color: transparent;
+            border-radius: 0; 
+            box-shadow: 0px 0px 5px 2px orangered;
+            margin-top: 0;
+        }     
+
+        .navbar {
+            display: flex;
+            padding: 22px 0;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            justify-content: space-between;
+        }
+
+        .navbar .hamburger-btn {
+            display: none;
+            color: orangered; 
+            cursor: pointer;
+            font-size: 1.5rem;
+        }
+
+        .navbar .logo {
+            gap: 10px;
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+
+        .navbar .logo img {
+            width: 40px;
+            border-radius: 50%;
+            margin-top: 10px;
+        }
+
+        .navbar .logo h2 {
+            color: orangered;
+            font-weight: 600;
+            font-size: 1.7rem;
+            margin-top: 10px;
+        }
+
+        .navbar .links {
+            display: flex;
+            gap: 35px;
+            list-style: none;
+            align-items: center;
+        }
+
+        .navbar .close-btn {
+            position: absolute;
+            right: 20px;
+            top: 20px;
+            display: none;
+            color: #000;
+            cursor: pointer;
+        }
+
+        .navbar .links a {
+            color: black;
+            font-size: 1.1rem;
+            font-weight: 500;
+            text-decoration: none;
+            transition: 0.1s ease;
+        }
+
+        .navbar .links a:hover {
+            color: orangered;
+        }
+
+        .navbar .register-btn {
+            border: none;
+            outline: none;
+            background: transparent;
+            color: black;
+            font-size: 1rem;
+            font-weight: 600;
+            padding: 10px 18px;
+            border: 2px solid orangered;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: 0.15s ease;
+            width: 190px;
+        }
+
+        .register-btn{
+            color: black;
+        }
+
+        .navbar .register-btn:hover {
+            background: rgb(219, 145, 118);
+        }
+
+        @media (max-width: 950px) {
+            .navbar :is(.hamburger-btn, .close-btn) {
+                display: block;
+            }
+
+            .navbar {
+                padding: 15px 0;
+            }
+
+            .navbar .logo img {
+                display: none;
+            }
+
+            .navbar .logo h2 {
+                font-size: 1.4rem;
+            }
+
+            .navbar .links {
+                position: fixed;
+                top: 0;
+                z-index: 10;
+                left: -100%;
+                display: block;
+                height: 100vh;
+                width: 100%;
+                padding-top: 60px;
+                text-align: center;
+                background: #fff;
+                transition: 0.2s ease;
+            }
+
+            .navbar .links.show-menu {
+                left: 0;
+            }
+
+            .navbar .links a {
+                display: inline-flex;
+                margin: 20px 0;
+                font-size: 1.2rem;
+                color: #000;
+            }
+
+            .navbar .links a:hover {
+                color: orangered;
+            }
+
+            .navbar .register-btn {
+                font-size: 0.9rem;
+                padding: 7px 10px;
+            }
+        }
+
+        li{
+            font-size: 15px;
+            margin-left: 23px;
+        }
+
+        h2{
+            font-size: 25px;
+            font-weight: bold;
+            font-style: oblique;
+        }
+
+
+        #container{
+            display: flex;
+            justify-content:first baseline;
+            align-items: flex-start;
+            margin: 0 auto;
+            max-width: 1200px;
+            padding: 20px;
+        }
+
+        #container section {
+            width: 45%;
+            margin-right: 5%;
+        }
+
+        #container #picture img {
+            width: 100%;
+            max-width: 500px;
+            margin-bottom: 0;
+            margin-top:0;
+        }
+
+    
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+        <span style="color: orangered; " class="hamburger-btn material-symbols-rounded">menu</span>
+        <a href="#" class="logo">
+            <img src="/Preview.jpg" alt="logo" style="height: 50%;">
+            <h2 style="color: #000; font-size: 34px; font-weight: bolder;">NANNY</h2>
+            <h2 style="color: orangered; font-size: 34px; font-weight: bolder;">CO.</h2>
+        </a>
+        <ul class="links" id="">
+            <span class="close-btn material-symbols-rounded">close</span>
+        </ul>
+        <button class="register-btn"><a style="text-decoration: none; color: orangered;" href="/RegisterLogin.html">REGISTER | LOGIN</a></button>   
+    </nav>
+  </header>
+  <main>
+    <div id="container">
+        <section>
+            <h2>1. What are cookies?</h2>
+            <p>Cookies are small text files that are stored on your device (computer or mobile device) <br>
+                when you visit websites. They are widely used to make websites work more efficiently, as well<br>
+                 as to provide information to the owners of the site.</p>
+        </section>
+        <section>
+            <h2>2. How do we use cookies?</h2>
+            <p>At NANNY CO., we use cookies to improve your browsing experience and provide personalized services.
+                <br>We may use both session cookies (which expire when you close your browser) and persistent cookies
+                <br> (which remain on your device for a set period of time).</p>
+            <p>Specifically, we use cookies for:</p>
+            <ul>
+            <li>Authenticating users and maintaining user sessions.</li>
+            <li>Remembering your preferences and settings.</li>
+            <li>Analyzing site traffic and usage patterns.</li>
+            <li>Customizing content and advertising.</li>
+            </ul>
+        </section>
+        <section>
+            <h2>3. How to control cookies?</h2>
+            <p>You can control and manage cookies in your browser settings.<br> Most web browsers allow you to block or 
+                <br>delete cookies, as well as to set preferences for how cookies are handled. However, please note<br>
+                 that disabling cookies may affect your experience on our website and limit certain <br>
+                 features and functionalities.</p>
+        </section>
+        <section>
+            <h2>4. Changes to this policy</h2>
+            <p>We may update our Cookie Policy from time to time to reflect changes in our practices or for other
+                <br> operational, legal, or regulatory reasons. We encourage you to review this policy periodically <br>
+                for any updates or changes.</p>
+        </section>
+         <div id="picture">
+            <img src="/_1001cf0b-f168-4708-a4a7-a3961f323e86-removebg-preview.png" alt="picture of a boy">
+        </div>
+    </div>
+  </main>
+  <footer>
+    <div class="content">
+        <div class="top">
+        <div class="logo-details">
+            <span class="logo_name" style="font-size: 50px;">NANNY CO.</span>
+        </div>
+        <div class="media-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+        </div>
+        <div class="link-boxes">
+        <ul class="box">
+            <li class="link_name">Company</li>
+            <li><a href="WelcomePage.html">Home</a></li>
+            <li><a href="#">Contact us</a></li>
+            <li><a href="#">About us</a></li>
+            <li><a href="/">Get started</a></li>
+        </ul>
+        <ul class="box">
+            <li class="link_name">Services</li>
+            <li><a href="#">In-Home Childcare</a></li>
+            <li><a href="#">babysitting</a></li>
+            <li><a href="#">Nanny Placements</a></li>
+            <li><a href="#">Child Development Activities</a></li>
+            <li><a href="#">Household Management</a></li>
+        </ul>
+        <ul class="box">
+            <li class="link_name">Account</li>
+            <li><a href="#">Profile</a></li>
+            <li><a href="#">My account</a></li>
+            <li><a href="#">Preferences</a></li>
+        </ul>
+        <ul class="box">
+            <li class="link_name">NANNY CO</li>
+            <li><a href="#">Admin</a></li>
+            <li><a href="#">How it works?</a></li>
+            <li><a href="/FAQ.html">FAQ</a></li>
+        </ul>
+        <ul class="box input-box">
+            <li class="link_name">Subscribe</li>
+            <li><input type="text" placeholder="Enter your email"></li>
+            <li><input type="button" value="Subscribe"></li>
+        </ul>
+        </div>
+    </div>
+    <div class="bottom-details">
+        <div class="bottom_text">
+        <span class="copyright_text">Copyright © 2024 <a href="#">NANNY CO. </a>All rights reserved</span>
+        <span class="policy_terms">
+            <a href="/privacyPolicy.html">Privacy policy</a>
+            <a href="/termsOfService.html">Terms & condition</a>
+        </span>
+        </div>
+    </div>
+</footer>
+  <script src="script.js"></script>
+</body>
+</html>
